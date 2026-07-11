@@ -293,7 +293,7 @@ raw zone table load
 USE WAREHOUSE demo_build_wh;
 
 
-COPY INTO {{env}}_staging_tasty_bytes.raw_pos.country
+COPY INTO {{env}}_tasty_bytes.raw_pos.country
 (
    country_id,
    country,
@@ -303,7 +303,7 @@ COPY INTO {{env}}_staging_tasty_bytes.raw_pos.country
    city,
    city_population
 )
-FROM @{{env}}_staging_tasty_bytes.public.s3load/raw_pos/country/;
+FROM @{{env}}_tasty_bytes.public.s3load/raw_pos/country/;
 
 
 -- franchise table load
